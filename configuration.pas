@@ -13,13 +13,16 @@ type
 
   TTelegramConfig = class
   private
+    FAPIEndPoint: String;
     FAPIToken: String;
     FChatId: Int64;
     FSleepTime: Integer;
+    function GetAPIEndPoint: String;
   published
     property ChatID: Int64 read FChatId write FChatID;
     property APIToken: String read FAPIToken write FAPIToken;
     property SleepTime: Integer read FSleepTime write FSleepTime;
+    property APIEndPoint: String read GetAPIEndPoint write FAPIEndPoint;
   end;
 
   { TGoogleConfig }
@@ -54,7 +57,7 @@ procedure SaveToJSON(AObject: TObject; const AFileName: String);
 implementation
 
 uses
-  fpjson, fpjsonrtti
+  fpjson, fpjsonrtti, tgsendertypes
   ;
 
 procedure LoadFromJSON(AObject: TObject; const AFileName: String);
@@ -96,6 +99,16 @@ begin
     AJSON.Free;
     AStreamer.Free;
   end;
+end;
+
+{ TTelegramConfig }
+
+function TTelegramConfig.GetAPIEndPoint: String;
+begin
+  if FAPIEndPoint=EmptyStr then
+    Result:=TelegramAPI_URL
+  else
+    Result:=FAPIEndPoint;
 end;
 
 { TConfig }

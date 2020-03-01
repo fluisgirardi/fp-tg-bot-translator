@@ -140,7 +140,7 @@
         <PackageName Value="fptelegram"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -150,9 +150,13 @@
         <IsPartOfProject Value="True"/>
       </Unit1>
       <Unit2>
-        <Filename Value="..\fp-telegram\tgsynapsehttpclientbroker.pas"/>
+        <Filename Value="..\fp-telegram\tgsendertypes.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="C:\lazarus-stable\fpcsrc\packages\fcl-web\src\base\fphttpclient.pp"/>
+        <IsPartOfProject Value="True"/>
+      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -162,7 +166,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="../fp-telegram"/>
+      <OtherUnitFiles Value="../fp-telegram;C:/lazarus-stable/fpcsrc/packages/fcl-web/src/base/"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>

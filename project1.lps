@@ -3,244 +3,268 @@
   <ProjectSession>
     <Version Value="11"/>
     <BuildModes Active="Debug"/>
-    <Units Count="16">
+    <Units Count="19">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="18" Y="11"/>
-        <UsageCount Value="51"/>
+        <TopLine Value="196"/>
+        <CursorPos X="68" Y="9"/>
+        <UsageCount Value="56"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="configuration.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="37"/>
-        <CursorPos X="37" Y="69"/>
-        <UsageCount Value="25"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="112"/>
+        <CursorPos X="25" Y="111"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
+        <Filename Value="../fp-telegram/tgsendertypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="2136"/>
+        <CursorPos Y="2158"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../fp-telegram/tgsynapsehttpclientbroker.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="21"/>
+      </Unit3>
+      <Unit4>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/packages/fcl-web/src/base/fphttpclient.pp"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="361"/>
         <CursorPos X="10" Y="385"/>
         <UsageCount Value="21"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="923"/>
-        <CursorPos Y="931"/>
-        <UsageCount Value="22"/>
-        <Loaded Value="True"/>
-      </Unit3>
-      <Unit4>
-        <Filename Value="../fp-telegram/tgsendertypes.pas"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="498"/>
-        <CursorPos X="14" Y="509"/>
-        <UsageCount Value="17"/>
-        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
+        <Filename Value="../fp-telegram/tgtypes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="920"/>
+        <CursorPos Y="931"/>
+        <UsageCount Value="22"/>
+      </Unit5>
+      <Unit6>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/objpas/sysutils/sysutilh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="307"/>
         <CursorPos X="13" Y="331"/>
         <UsageCount Value="18"/>
-      </Unit5>
-      <Unit6>
+      </Unit6>
+      <Unit7>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/objpas/sysutils/sysutils.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="154"/>
         <CursorPos X="9" Y="158"/>
         <UsageCount Value="9"/>
-      </Unit6>
-      <Unit7>
+      </Unit7>
+      <Unit8>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/inc/objpash.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="191"/>
         <CursorPos X="21" Y="215"/>
         <UsageCount Value="9"/>
-      </Unit7>
-      <Unit8>
+      </Unit8>
+      <Unit9>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/inc/objpas.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="331"/>
         <CursorPos X="12" Y="334"/>
         <UsageCount Value="9"/>
-      </Unit8>
-      <Unit9>
+      </Unit9>
+      <Unit10>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/objpas/sysutils/syshelph.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="116"/>
         <CursorPos X="14" Y="131"/>
         <UsageCount Value="16"/>
-      </Unit9>
-      <Unit10>
+      </Unit10>
+      <Unit11>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/objpas/sysutils/sysstrh.inc"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="40" Y="28"/>
         <UsageCount Value="16"/>
-      </Unit10>
-      <Unit11>
+      </Unit11>
+      <Unit12>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/inc/ustringh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="114"/>
         <CursorPos X="10" Y="138"/>
         <UsageCount Value="16"/>
-      </Unit11>
-      <Unit12>
+      </Unit12>
+      <Unit13>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/inc/ustrings.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2088"/>
         <CursorPos X="5" Y="2090"/>
         <UsageCount Value="16"/>
-      </Unit12>
-      <Unit13>
+      </Unit13>
+      <Unit14>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/trunk/packages/fcl-json/src/fpjson.pp"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="79"/>
         <CursorPos X="14" Y="156"/>
         <UsageCount Value="11"/>
-      </Unit13>
-      <Unit14>
-        <Filename Value="../fp-telegram/tgfclhttpclientbroker.pas"/>
-        <EditorIndex Value="3"/>
-        <CursorPos X="40" Y="52"/>
-        <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit14>
       <Unit15>
-        <Filename Value="../fp-telegram/tgsynapsehttpclientbroker.pas"/>
-        <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <UsageCount Value="20"/>
+        <Filename Value="../fp-telegram/tgfclhttpclientbroker.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="226"/>
+        <CursorPos Y="239"/>
+        <UsageCount Value="11"/>
         <Loaded Value="True"/>
       </Unit15>
+      <Unit16>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="581"/>
+        <CursorPos Y="593"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="../fp-telegram/tgbasehttpclient.pas"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="15" Y="41"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-json/src/jsonscanner.pp"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="44"/>
+        <CursorPos X="3" Y="57"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit18>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="192" TopLine="185"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1362" TopLine="1344"/>
       </Position1>
       <Position2>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="196" Column="57" TopLine="183"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1363" TopLine="1344"/>
       </Position2>
       <Position3>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="22" Column="25" TopLine="9"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1246" TopLine="1233"/>
       </Position3>
       <Position4>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="192" Column="12" TopLine="180"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1247" TopLine="1233"/>
       </Position4>
       <Position5>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="205" Column="39" TopLine="183"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1248" TopLine="1233"/>
       </Position5>
       <Position6>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="191" TopLine="183"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1249" TopLine="1233"/>
       </Position6>
       <Position7>
-        <Filename Value="configuration.pas"/>
-        <Caret Line="22" Column="66" TopLine="9"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1250" TopLine="1233"/>
       </Position7>
       <Position8>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="212" Column="18" TopLine="192"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1252" TopLine="1233"/>
       </Position8>
       <Position9>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="215" Column="7" TopLine="195"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1253" TopLine="1233"/>
       </Position9>
       <Position10>
-        <Filename Value="configuration.pas"/>
-        <Caret Line="72" Column="7" TopLine="49"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1254" TopLine="1233"/>
       </Position10>
       <Position11>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="109" Column="28" TopLine="96"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1257" TopLine="1235"/>
       </Position11>
       <Position12>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="112" Column="109" TopLine="99"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1193" TopLine="1180"/>
       </Position12>
       <Position13>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="149" Column="109" TopLine="136"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1194" TopLine="1180"/>
       </Position13>
       <Position14>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="194" Column="37" TopLine="181"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1195" TopLine="1180"/>
       </Position14>
       <Position15>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="203" Column="34" TopLine="191"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1356" TopLine="1343"/>
       </Position15>
       <Position16>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="115" Column="48" TopLine="103"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1193" Column="42" TopLine="1182"/>
       </Position16>
       <Position17>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="22" Column="25" TopLine="9"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="584" TopLine="571"/>
       </Position17>
       <Position18>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="152" Column="48" TopLine="139"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="585" TopLine="571"/>
       </Position18>
       <Position19>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="115" Column="48" TopLine="103"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="587" TopLine="571"/>
       </Position19>
       <Position20>
-        <Filename Value="configuration.pas"/>
-        <Caret Line="128" Column="33" TopLine="109"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="588" TopLine="571"/>
       </Position20>
       <Position21>
-        <Filename Value="configuration.pas"/>
-        <Caret Line="82" Column="3" TopLine="59"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="589" TopLine="571"/>
       </Position21>
       <Position22>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="26" Column="16" TopLine="16"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="592" TopLine="571"/>
       </Position22>
       <Position23>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="241" TopLine="13"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="564" TopLine="551"/>
       </Position23>
       <Position24>
-        <Filename Value="configuration.pas"/>
-        <Caret Line="69" Column="37" TopLine="57"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="565" TopLine="551"/>
       </Position24>
       <Position25>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="24" Column="17" TopLine="13"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="566" TopLine="551"/>
       </Position25>
       <Position26>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="199" Column="3" TopLine="188"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="567" TopLine="551"/>
       </Position26>
       <Position27>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="9" Column="94"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="568" TopLine="551"/>
       </Position27>
       <Position28>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="209" TopLine="197"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="575" TopLine="553"/>
       </Position28>
       <Position29>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="9" Column="73"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="593" TopLine="581"/>
       </Position29>
       <Position30>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="11" Column="18"/>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Caret Line="1195" TopLine="1181"/>
       </Position30>
     </JumpHistory>
     <RunParams>
@@ -248,4 +272,29 @@
       <Modes Count="0" ActiveMode=""/>
     </RunParams>
   </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <Line Value="593"/>
+      </Item1>
+    </BreakPoints>
+    <Watches Count="4">
+      <Item1>
+        <Expression Value="URL"/>
+      </Item1>
+      <Item2>
+        <Expression Value="CHost"/>
+      </Item2>
+      <Item3>
+        <Expression Value="CPort"/>
+      </Item3>
+      <Item4>
+        <Expression Value="AIsHttps"/>
+      </Item4>
+    </Watches>
+  </Debugging>
 </CONFIG>

@@ -6,9 +6,9 @@ uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
-  Classes, SysUtils, {$IF FPC_FULLVERSION < 30300}ssockets, sslsockets, {$ELSE}opensslsockets, fpopenssl, {$ENDIF}
+  Classes, SysUtils, {$IF FPC_FULLVERSION < 30300}{$ELSE}opensslsockets, fpopenssl, {$ENDIF}
   tgsendertypes, tgtypes, CustApp, fpjson, jsonparser, StrUtils, fphttpclient,
-  configuration, tgsynapsehttpclientbroker
+  configuration, eventlog, jsonscanner
   ;
 
 type
@@ -112,7 +112,7 @@ begin
       response:=TFPHTTPClient.SimpleGet('https://translation.googleapis.com/language/translate/v2?key='+Conf.Google.APIKey+'&q='+EncodeURLElement(AMessage.Text)+'&target=pt');
       if response<>'' then
         try
-          jparser:=TJSONParser.Create(response);
+          jparser:=TJSONParser.Create(response, DefaultOptions);
           jObj2:=jparser.Parse;
           jobj3:=jobj2.FindPath('data.translations[0].detectedSourceLanguage');
           jobj4:=jobj2.FindPath('data.translations[0].translatedText');
@@ -149,7 +149,7 @@ begin
       response:=TFPHTTPClient.SimpleGet('https://translation.googleapis.com/language/translate/v2?key='+Conf.Google.APIKey+'&q='+EncodeURLElement(AMessage.Text)+'&target=en');
       if response<>'' then
         try
-          jparser:=TJSONParser.Create(response);
+          jparser:=TJSONParser.Create(response, DefaultOptions);
           jObj2:=jparser.Parse;
           jobj3:=jobj2.FindPath('data.translations[0].detectedSourceLanguage');
           jobj4:=jobj2.FindPath('data.translations[0].translatedText');
@@ -192,7 +192,9 @@ var
 procedure SetupBot;
 begin
   TgBot:=TTelegramSender.Create(Conf.Telegram.APIToken);
+  TgBot.APIEndPoint:=Conf.Telegram.APIEndPoint;
   TgBot.OnReceiveMessage:=@TgMessage;
+  TgBot.Logger:=TEventLog.Create(nil);
 end;
 
 begin
@@ -206,8 +208,9 @@ begin
   end;
   while true do begin
     try
-      if not Assigned(TgBot) then SetupBot;
-      if TgBot.getUpdatesEx(0,0,[utMessage]) and MsgQueued then begin
+      if not Assigned(TgBot) then
+        SetupBot;
+      if TgBot.getUpdatesEx(0,6,[utMessage]) and MsgQueued then begin
         if TgBot.sendMessage(Conf.Telegram.ChatID, Msgs, pmMarkdown, true) then begin
           Msgs:='';
           MsgQueued:=false;
@@ -221,8 +224,10 @@ begin
           Sleep(Conf.Telegram.SleepTime);
       end;
     except
-      FreeAndNil(TgBot);
+
     end;
+    TgBot.Logger.Free;
+    FreeAndNil(TgBot);
   end;
 end;
 
