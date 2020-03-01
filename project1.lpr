@@ -7,8 +7,8 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Classes, SysUtils, {$IF FPC_FULLVERSION < 30300}{$ELSE}opensslsockets, fpopenssl, {$ENDIF}
-  tgsendertypes, tgtypes, CustApp, fpjson, jsonparser, StrUtils, fphttpclient,
-  configuration, eventlog, jsonscanner
+  tgtypes, CustApp, fpjson, jsonparser, StrUtils,
+  configuration, eventlog, jsonscanner, fphttpclient, tgsendertypes
   ;
 
 type
