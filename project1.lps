@@ -1,229 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
-    <Version Value="11"/>
-    <BuildModes Active="arm-linux-Release"/>
-    <Units Count="13">
+    <Version Value="12"/>
+    <BuildModes Active="Debug"/>
+    <Units Count="20">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="203"/>
-        <CursorPos Y="238"/>
-        <UsageCount Value="46"/>
+        <TopLine Value="226"/>
+        <CursorPos Y="249"/>
+        <UsageCount Value="56"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/packages/fcl-web/src/base/fphttpclient.pp"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="361"/>
-        <CursorPos X="10" Y="385"/>
-        <UsageCount Value="21"/>
+        <Filename Value="configuration.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="111"/>
+        <CursorPos X="25" Y="111"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="923"/>
-        <CursorPos Y="931"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-      </Unit2>
-      <Unit3>
         <Filename Value="../fp-telegram/tgsendertypes.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="2531"/>
-        <CursorPos Y="2538"/>
-        <UsageCount Value="17"/>
+        <TopLine Value="2136"/>
+        <CursorPos Y="2158"/>
+        <UsageCount Value="22"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../fp-telegram/tgsynapsehttpclientbroker.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="21"/>
       </Unit3>
       <Unit4>
+        <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="361"/>
+        <CursorPos X="10" Y="385"/>
+        <UsageCount Value="21"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../fp-telegram/tgtypes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="920"/>
+        <CursorPos Y="931"/>
+        <UsageCount Value="22"/>
+      </Unit5>
+      <Unit6>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/objpas/sysutils/sysutilh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="307"/>
         <CursorPos X="13" Y="331"/>
         <UsageCount Value="18"/>
-      </Unit4>
-      <Unit5>
+      </Unit6>
+      <Unit7>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/objpas/sysutils/sysutils.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="154"/>
         <CursorPos X="9" Y="158"/>
         <UsageCount Value="9"/>
-      </Unit5>
-      <Unit6>
+      </Unit7>
+      <Unit8>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/inc/objpash.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="191"/>
         <CursorPos X="21" Y="215"/>
         <UsageCount Value="9"/>
-      </Unit6>
-      <Unit7>
+      </Unit8>
+      <Unit9>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/inc/objpas.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="331"/>
         <CursorPos X="12" Y="334"/>
         <UsageCount Value="9"/>
-      </Unit7>
-      <Unit8>
+      </Unit9>
+      <Unit10>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/objpas/sysutils/syshelph.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="116"/>
         <CursorPos X="14" Y="131"/>
         <UsageCount Value="16"/>
-      </Unit8>
-      <Unit9>
+      </Unit10>
+      <Unit11>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/objpas/sysutils/sysstrh.inc"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="40" Y="28"/>
         <UsageCount Value="16"/>
-      </Unit9>
-      <Unit10>
+      </Unit11>
+      <Unit12>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/inc/ustringh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="114"/>
         <CursorPos X="10" Y="138"/>
         <UsageCount Value="16"/>
-      </Unit10>
-      <Unit11>
+      </Unit12>
+      <Unit13>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/fixes_3_2_0/rtl/inc/ustrings.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2088"/>
         <CursorPos X="5" Y="2090"/>
         <UsageCount Value="16"/>
-      </Unit11>
-      <Unit12>
+      </Unit13>
+      <Unit14>
         <Filename Value="/home_ssd/eletromep/development/fpcsources/trunk/packages/fcl-json/src/fpjson.pp"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="79"/>
         <CursorPos X="14" Y="156"/>
         <UsageCount Value="11"/>
-      </Unit12>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../fp-telegram/tgfclhttpclientbroker.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="226"/>
+        <CursorPos Y="239"/>
+        <UsageCount Value="11"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-web/src/base/fphttpclient.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="581"/>
+        <CursorPos Y="593"/>
+        <UsageCount Value="20"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="../fp-telegram/tgbasehttpclient.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="41"/>
+        <UsageCount Value="10"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-json/src/jsonscanner.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="3" Y="57"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="../../../../../../lazarus-stable/fpcsrc/packages/fcl-net/src/ssockets.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="211"/>
+        <CursorPos X="17" Y="224"/>
+        <UsageCount Value="10"/>
+      </Unit19>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="2" HistoryIndex="1">
       <Position1>
         <Filename Value="project1.lpr"/>
-        <Caret Line="205" TopLine="181"/>
+        <Caret Line="9" Column="68"/>
       </Position1>
       <Position2>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="45" Column="20" TopLine="22"/>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="11" Column="68"/>
       </Position2>
-      <Position3>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Column="3"/>
-      </Position3>
-      <Position4>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="12" Column="19"/>
-      </Position4>
-      <Position5>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="13" Column="19"/>
-      </Position5>
-      <Position6>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="24" Column="70"/>
-      </Position6>
-      <Position7>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="31" Column="44"/>
-      </Position7>
-      <Position8>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="59" Column="46" TopLine="19"/>
-      </Position8>
-      <Position9>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="61" Column="52" TopLine="21"/>
-      </Position9>
-      <Position10>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="62" Column="48" TopLine="22"/>
-      </Position10>
-      <Position11>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="64" Column="42" TopLine="24"/>
-      </Position11>
-      <Position12>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="73" Column="39" TopLine="33"/>
-      </Position12>
-      <Position13>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="12" Column="3"/>
-      </Position13>
-      <Position14>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="103" Column="22" TopLine="67"/>
-      </Position14>
-      <Position15>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="205" Column="34" TopLine="173"/>
-      </Position15>
-      <Position16>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="931" TopLine="923"/>
-      </Position16>
-      <Position17>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="932" TopLine="923"/>
-      </Position17>
-      <Position18>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="934" TopLine="923"/>
-      </Position18>
-      <Position19>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="935" TopLine="923"/>
-      </Position19>
-      <Position20>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="119" TopLine="95"/>
-      </Position20>
-      <Position21>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="931" TopLine="923"/>
-      </Position21>
-      <Position22>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="119" TopLine="95"/>
-      </Position22>
-      <Position23>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="931" TopLine="923"/>
-      </Position23>
-      <Position24>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="156" TopLine="133"/>
-      </Position24>
-      <Position25>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="75" TopLine="52"/>
-      </Position25>
-      <Position26>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="205" Column="19" TopLine="174"/>
-      </Position26>
-      <Position27>
-        <Filename Value="../fp-telegram/tgtypes.pas"/>
-        <Caret Line="931" TopLine="923"/>
-      </Position27>
-      <Position28>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="156" TopLine="133"/>
-      </Position28>
-      <Position29>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="205" Column="19" TopLine="182"/>
-      </Position29>
-      <Position30>
-        <Filename Value="project1.lpr"/>
-        <Caret Line="75" TopLine="75"/>
-      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
-      <Modes Count="0" ActiveMode=""/>
+      <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="URL"/>
+      </Item>
+      <Item>
+        <Expression Value="CHost"/>
+      </Item>
+      <Item>
+        <Expression Value="CPort"/>
+      </Item>
+      <Item>
+        <Expression Value="AIsHttps"/>
+      </Item>
+    </Watches>
+  </Debugging>
 </CONFIG>

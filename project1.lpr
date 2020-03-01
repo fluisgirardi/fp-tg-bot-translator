@@ -6,9 +6,10 @@ uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
-  Classes, SysUtils, openssl, opensslsockets, fpopenssl, tgsendertypes, tgtypes,
-  CustApp, fpjson, jsonparser, StrUtils, fphttpclient
-  { you can add units after this };
+  Classes, SysUtils, {$IF FPC_FULLVERSION < 30300}{$ELSE}opensslsockets, fpopenssl, {$ENDIF}
+  tgtypes, CustApp, fpjson, jsonparser, StrUtils,
+  configuration, eventlog, jsonscanner, fphttpclient, tgsendertypes
+  ;
 
 type
 
@@ -18,7 +19,7 @@ type
   private
     MsgQueued:Boolean;
     Msgs:UTF8String;
-    procedure TgMessage(ASender: TObject; AMessage: TTelegramMessageObj);
+    procedure TgMessage({%H-}ASender: TObject; AMessage: TTelegramMessageObj);
   protected
     procedure DoRun; override;
   public
@@ -104,16 +105,14 @@ var
   jObj2, jobj3, jobj4: TJSONData;
   auxStr: UTF8String;
   response: Utf8STring;
-const 
-  gtranslatorAPI_key = 'Your Google translator API Key goes here!';
 begin
-  if (AMessage.Chat.ID=-1001271631027) then begin
+  if (AMessage.Chat.ID=Conf.Telegram.ChatID) then begin
 
     try
-      response:=TFPHTTPClient.SimpleGet('https://translation.googleapis.com/language/translate/v2?key='+gtranslatorAPI_key+'&q='+EncodeURLElement(AMessage.Text)+'&target=pt');
+      response:=TFPHTTPClient.SimpleGet('https://translation.googleapis.com/language/translate/v2?key='+Conf.Google.APIKey+'&q='+EncodeURLElement(AMessage.Text)+'&target=pt');
       if response<>'' then
         try
-          jparser:=TJSONParser.Create(response);
+          jparser:=TJSONParser.Create(response, DefaultOptions);
           jObj2:=jparser.Parse;
           jobj3:=jobj2.FindPath('data.translations[0].detectedSourceLanguage');
           jobj4:=jobj2.FindPath('data.translations[0].translatedText');
@@ -137,7 +136,7 @@ begin
             //auxStr:=StringReplace(auxStr,'.','\.',[rfReplaceAll]);
             //auxStr:=StringReplace(auxStr,'!','\!',[rfReplaceAll]);
 
-            Msgs:=Msgs+'['+UTF8Encode(AMessage.From.First_name)+'](tg://user?id='+UTF8Encode(AMessage.From.ID.ToString)+') [escreveu](https://t.me/pascalscada/'+UTF8Encode(AMessage.MessageId.ToString)+'): '+auxStr+LineEnding+LineEnding;
+            Msgs:=Msgs+'['+UTF8Encode(AMessage.From.First_name)+'](tg://user?id='+UTF8Encode(AMessage.From.ID.ToString)+') [escreveu](https://t.me/'+AMessage.Chat.Username+'/'+UTF8Encode(AMessage.MessageId.ToString)+'): '+auxStr+LineEnding+LineEnding;
           end;
         finally
           FreeAndNil(jparser);
@@ -147,10 +146,10 @@ begin
     end;
 
     try
-      response:=TFPHTTPClient.SimpleGet('https://translation.googleapis.com/language/translate/v2?key=AIzaSyBGD_JOdlWhwHlGmi7V--WJi1BV5RlWXOk&q='+EncodeURLElement(AMessage.Text)+'&target=en');
+      response:=TFPHTTPClient.SimpleGet('https://translation.googleapis.com/language/translate/v2?key='+Conf.Google.APIKey+'&q='+EncodeURLElement(AMessage.Text)+'&target=en');
       if response<>'' then
         try
-          jparser:=TJSONParser.Create(response);
+          jparser:=TJSONParser.Create(response, DefaultOptions);
           jObj2:=jparser.Parse;
           jobj3:=jobj2.FindPath('data.translations[0].detectedSourceLanguage');
           jobj4:=jobj2.FindPath('data.translations[0].translatedText');
@@ -174,7 +173,7 @@ begin
             //auxStr:=StringReplace(auxStr,'.','\.',[rfReplaceAll]);
             //auxStr:=StringReplace(auxStr,'!','\!',[rfReplaceAll]);
 
-            Msgs:=Msgs+'['+UTF8Encode(AMessage.From.First_name)+'](tg://user?id='+UTF8Encode(AMessage.From.ID.ToString)+') [wrote](https://t.me/pascalscada/'+UTF8Encode(AMessage.MessageId.ToString)+'): '+UTF8Encode(auxStr)+LineEnding+LineEnding;
+            Msgs:=Msgs+'['+UTF8Encode(AMessage.From.First_name)+'](tg://user?id='+UTF8Encode(AMessage.From.ID.ToString)+') [wrote](https://t.me/'+AMessage.Chat.Username+'/'+UTF8Encode(AMessage.MessageId.ToString)+'): '+UTF8Encode(auxStr)+LineEnding+LineEnding;
           end;
         finally
           FreeAndNil(jparser);
@@ -184,27 +183,35 @@ begin
 
     end;
   end;
-  end;
+end;
 
 procedure TMyApplication.DoRun;
 var
   TgBot:TTelegramSender = nil;
-const
-  tbbotapi = 'your Telegram Bot API key goes here';
-  tgchartID = -1001271631027; //ID of the group/person where translated messages will be sent.
 
 procedure SetupBot;
 begin
-  TgBot:=TTelegramSender.Create(tbbotapi);
+  TgBot:=TTelegramSender.Create(Conf.Telegram.APIToken);
+  TgBot.APIEndPoint:=Conf.Telegram.APIEndPoint;
   TgBot.OnReceiveMessage:=@TgMessage;
+  TgBot.Logger:=TEventLog.Create(nil);
 end;
 
 begin
+  if not FileExists(ConfFile) then
+  begin
+    WriteLn('Please fill in the settings file! '+ConfFile);
+    ReadLn;
+    SaveToJSON(Conf, ConfFile);
+    Terminate;
+    Exit;
+  end;
   while true do begin
     try
-      if not Assigned(TgBot) then SetupBot;
-      if TgBot.getUpdatesEx(0,0,[utMessage]) and MsgQueued then begin
-        if TgBot.sendMessage(tgchartID, Msgs, pmMarkdown, true) then begin
+      if not Assigned(TgBot) then
+        SetupBot;
+      if TgBot.getUpdatesEx(0,6,[utMessage]) and MsgQueued then begin
+        if TgBot.sendMessage(Conf.Telegram.ChatID, Msgs, pmMarkdown, true) then begin
           Msgs:='';
           MsgQueued:=false;
         end else begin
@@ -213,11 +220,14 @@ begin
           writeln(TgBot.LastErrorDescription);
           WriteLn(TgBot.CurrentUpdate.AsString);
         end;
-        Sleep(3000);
+        if Conf.Telegram.SleepTime>0 then
+          Sleep(Conf.Telegram.SleepTime);
       end;
     except
-      FreeAndNil(TgBot);
+
     end;
+    TgBot.Logger.Free;
+    FreeAndNil(TgBot);
   end;
 end;
 
